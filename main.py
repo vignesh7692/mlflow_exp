@@ -8,9 +8,9 @@ from pyspark import SparkContext
 from pyspark.sql import SparkSession
 
 def log_delta():
-    spark = SparkSession.builder.getOrCreate()
-    data = spark.sql("select * from freddy_fm_d2c.d2c_accounts where mcr_account_id = 1511679284073906176 ").toPandas()
-    accid = data['mcr_account_id']
+    #spark = SparkSession.builder.getOrCreate()
+    #data = spark.sql("select * from freddy_fm_d2c.d2c_accounts where mcr_account_id = 1511679284073906176 ").toPandas()
+    accid = 123 #data['mcr_account_id']
     print(accid)
     mlflow.log_param("acc_id", accid)
 
